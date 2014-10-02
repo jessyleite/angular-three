@@ -1,0 +1,20 @@
+<div id="threeContainer" ng-three model="model" scale="scale" camera="camera" fps="fps"></div>
+
+<div class="menu">
+
+    <label for="model">Model</label>
+    <select id="model" ng-model="model">
+        <option ng-repeat="_model in models" value="{{ _model }}">{{ _model }}
+        </option>
+    </select>
+
+    <label for="scale">Scale</label>
+    <input type="range" min="0.1" max="5" step="0.1" ng-model="scale" />
+
+    <label for="camera">CameraPositionY</label>
+    <input type="range" min="-50" max="50" step="0.1" ng-model="camera.y" />
+
+    <button ng-click="sayHello()">Say Hello</button>
+
+    <label for="fps">{{fps}} fps</label>
+</div>
